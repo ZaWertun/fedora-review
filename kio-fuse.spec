@@ -29,15 +29,16 @@ BuildRequires:  cmake(KF5DBusAddons) >= %{min_kf_version}
 BuildRequires:  cmake(KF5JobWidgets) >= %{min_kf_version}
 
 %description
-KioFuse works by acting as a bridge between KDE's KIO filesystem design and FUSE.
+KioFuse works by acting as a bridge between KDE's KIO filesystem design and
+FUSE.
 
 
 %prep
 %autosetup -p1 -n %{name}-v%{version}
+mkdir %{_target_platform}
 
 
 %build
-mkdir %{_target_platform}
 pushd %{_target_platform}
 %{cmake_kf5} ..
 popd
@@ -46,12 +47,7 @@ popd
 
 
 %install
-make install/fast DESTDIR=%{buildroot} -C %{_target_platform}
-
-
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
+%make_install -C %{_target_platform}
 
 
 %files
