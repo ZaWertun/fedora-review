@@ -10,6 +10,8 @@ License:        GPLv3+
 URL:            https://invent.kde.org/system/kio-fuse
 Source0:        %{url}/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
 
+BuildRequires:  cmake
+BuildRequires:  gcc-c++
 BuildRequires:  kf5-rpm-macros
 BuildRequires:  extra-cmake-modules  >= %{min_kf_version}
 
