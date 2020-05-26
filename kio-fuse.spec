@@ -29,6 +29,9 @@ BuildRequires:  cmake(KF5CoreAddons) >= %{min_kf_version}
 BuildRequires:  cmake(KF5DBusAddons) >= %{min_kf_version}
 BuildRequires:  cmake(KF5JobWidgets) >= %{min_kf_version}
 
+Requires:       systemd
+Requires:       dbus-common
+
 %description
 KioFuse works by acting as a bridge between KDE's KIO filesystem design and
 FUSE.
