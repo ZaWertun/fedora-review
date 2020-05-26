@@ -6,7 +6,6 @@ Version:        4.95.0
 Release:        1%{?dist}
 Summary:        KIO FUSE
 
-Group:          System Environment/Libraries
 License:        GPLv3+
 URL:            https://invent.kde.org/system/kio-fuse
 Source0:        %{url}/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
