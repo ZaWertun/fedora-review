@@ -34,6 +34,8 @@ Requires:      kf5-kdeclarative
 Summary:        Development files for %{name}
 License:        MIT
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       qt5-qtbase
+Requires:       qt5-qtbase-devel
 Requires:       cmake-filesystem
 
 %description    devel
@@ -44,7 +46,6 @@ developing applications that use %{name}.
 Summary:        Analytics and administration tool for UserFeedback servers
 License:        MIT
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Requires:       qt5-qtbase-devel
 
 %description    console
 Analytics and administration tool for UserFeedback servers.
