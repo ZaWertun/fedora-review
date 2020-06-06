@@ -43,6 +43,7 @@ developing applications that use %{name}.
 Summary:        Analytics and administration tool for UserFeedback servers
 License:        MIT
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       qt5-qtbase-devel
 
 %description    console
 Analytics and administration tool for UserFeedback servers.
