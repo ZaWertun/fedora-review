@@ -23,6 +23,9 @@ BuildRequires: cmake(Qt5Network)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5PrintSupport)
 
+Requires:      qt5-qtbase
+Requires:      qt5-qtdeclarative
+
 %description
 %{summary}.
 
@@ -30,6 +33,7 @@ BuildRequires: cmake(Qt5PrintSupport)
 Summary:        Development files for %{name}
 License:        MIT
 Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:       cmake-filesystem
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -74,6 +78,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/UserFeedbackConsole.d
 %{_bindir}/userfeedbackctl
 %{_libdir}/libKUserFeedbackCore.so.1*
 %{_libdir}/libKUserFeedbackWidgets.so.1*
+%dir %{_kf5_qmldir}/org/kde/userfeedback
 %{_kf5_qmldir}/org/kde/userfeedback/qmldir
 %{_kf5_qmldir}/org/kde/userfeedback/libKUserFeedbackQml.so
 
@@ -82,6 +87,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/UserFeedbackConsole.d
 %{_includedir}/KUserFeedback/
 %{_libdir}/libKUserFeedbackCore.so
 %{_libdir}/libKUserFeedbackWidgets.so
+%dir %{_kf5_libdir}/cmake/KUserFeedback
 %{_kf5_libdir}/cmake/KUserFeedback/KUserFeedback*.cmake
 %{_kf5_archdatadir}/mkspecs/modules/qt_KUserFeedback*.pri
 
