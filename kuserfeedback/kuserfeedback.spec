@@ -4,7 +4,7 @@ Version: 1.0.0
 Release: 1%{?dist}
 
 License: MIT
-URL:     https://cgit.kde.org/%{name}.git
+URL:     https://cgit.kde.org/%{name}.git/about/
 Source0: https://download.kde.org/stable/%{name}/%{name}-%{version}.tar.xz
 
 BuildRequires: cmake
