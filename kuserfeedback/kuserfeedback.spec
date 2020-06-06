@@ -25,6 +25,7 @@ BuildRequires: cmake(Qt5PrintSupport)
 
 Requires:      qt5-qtbase
 Requires:      qt5-qtdeclarative
+Requires:      kf5-kdeclarative
 
 %description
 %{summary}.
