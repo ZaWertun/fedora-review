@@ -1,5 +1,5 @@
 Name:    kuserfeedback
-Summary: Framework for collecting user feedback via telemetry and surveys
+Summary: Framework for collecting user feedback for apps via telemetry and surveys
 Version: 1.0.0
 Release: 1%{?dist}
 
