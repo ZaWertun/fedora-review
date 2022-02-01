@@ -1,4 +1,5 @@
 %global project_name sphinxext-opengraph
+%global pypi_name    sphinxext_opengraph
 
 Name:           python-%{project_name}
 Version:        0.5.1
@@ -7,7 +8,7 @@ Summary:        Sphinx extension to generate unique OpenGraph metadata
 
 License:        MIT
 URL:            https://%{project_name}.readthedocs.io/en/latest/
-Source0:        https://github.com/wpilibsuite/%{project_name}/archive/v%{version}/%{project_name}-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/s/%{project_name}/%{project_name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
@@ -24,6 +25,9 @@ Summary:        %{summary}
 
 %prep
 %autosetup -p1 -n %{project_name}-%{version}
+
+# Remove bundled egg-info
+rm -rf %{pypi_name}.egg-info
 
 sed -i 's|version = "main"|version = "%{version}"|' setup.py
 
