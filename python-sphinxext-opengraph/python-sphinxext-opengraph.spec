@@ -45,7 +45,9 @@ sed -i 's|version = "main"|version = "%{version}"|' setup.py
 
 
 %files -n python3-%{project_name} -f %{pyproject_files}
-%license LICENSE.md
+# License file is not included in PyPI sources,
+#   upstream issue: https://github.com/wpilibsuite/sphinxext-opengraph/issues/51
+#license LICENSE.md
 %doc README.md
 
 
