@@ -6,6 +6,8 @@ Version:        0.5.1
 Release:        1%{?dist}
 Summary:        Sphinx extension to generate unique OpenGraph metadata
 
+# License file is not included in PyPI sources,
+#   upstream issue: https://github.com/wpilibsuite/sphinxext-opengraph/issues/51
 License:        MIT
 URL:            https://%{project_name}.readthedocs.io/en/latest/
 Source0:        https://files.pythonhosted.org/packages/source/s/%{project_name}/%{project_name}-%{version}.tar.gz
@@ -45,8 +47,6 @@ sed -i 's|version = "main"|version = "%{version}"|' setup.py
 
 
 %files -n python3-%{project_name} -f %{pyproject_files}
-# License file is not included in PyPI sources,
-#   upstream issue: https://github.com/wpilibsuite/sphinxext-opengraph/issues/51
 #license LICENSE.md
 %doc README.md
 
