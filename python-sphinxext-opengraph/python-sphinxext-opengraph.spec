@@ -8,7 +8,7 @@ Summary:        Sphinx extension to generate unique OpenGraph metadata
 
 # License file is not included in PyPI sources,
 #   upstream issue: https://github.com/wpilibsuite/sphinxext-opengraph/issues/51
-License:        MIT
+License:        BSD
 URL:            https://%{project_name}.readthedocs.io/en/latest/
 Source0:        https://files.pythonhosted.org/packages/source/s/%{project_name}/%{project_name}-%{version}.tar.gz
 
